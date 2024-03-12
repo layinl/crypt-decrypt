@@ -1,0 +1,22 @@
+/* RESETS */
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+/*
+  END OF RESETS
+*/
