@@ -3,14 +3,14 @@
 *, 
 *:after,
 *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 ul, ol, li {
@@ -20,3 +20,41 @@ ul, ol, li {
 /*
   END OF RESETS
 */
+
+:root {
+  --color-primary: #0A3871
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+#text {
+  resize: none;
+  overflow-y: hidden;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: var(--color-primary);
+  height: 440px;
+}
+
+#text:focus {
+  outline: none;
+}
+
+#text::placeholder {
+  color: #0A3871;
+}
+
+@media screen and (max-width: 780px) {
+  
+  header {
+    margin: 24px 16px;
+  }
+
+  main {
+    margin: 0 16px;
+  }
+
+}
