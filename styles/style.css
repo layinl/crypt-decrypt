@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 /* RESETS */
 
 *, 
@@ -22,29 +24,79 @@ ul, ol, li {
 */
 
 :root {
-  --color-primary: #0A3871
+  --color-primary: #0A3871;
+  --font-main: "Inter", sans-serif;
 }
 
 body {
+  font-family: var(--font-main);
   background-color: #e5e5e5;
 }
 
-#text {
+.textarea {
   resize: none;
   overflow-y: hidden;
   border: none;
   background-color: transparent;
   font-size: 2rem;
   color: var(--color-primary);
-  height: 440px;
 }
 
-#text:focus {
-  outline: none;
+.textarea:focus {
+  outline: none; 
 }
 
-#text::placeholder {
-  color: #0A3871;
+.textarea[contenteditable]:empty::before {
+  content: "Digite seu texto";
+}
+
+.text-note-warn {
+  display: flex;
+  gap: 8px;
+}
+
+.button-group {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+button {
+  height: 67px;
+  border-radius: 24px;
+}
+
+.encrypt {
+  border-style: none;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+}
+
+.decrypt {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 32px;
+  margin-bottom: 40px;
+  padding: 32px;
+  box-shadow: 0 24px 32px -8px #00000015;
+}
+
+.output-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.output-text {
+  text-align: center;
 }
 
 @media screen and (max-width: 780px) {
@@ -56,5 +108,20 @@ body {
   main {
     margin: 0 16px;
   }
+
+  .text-input {
+    min-height: 40vh;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  button {
+    width: 100%;
+  }
+
 
 }

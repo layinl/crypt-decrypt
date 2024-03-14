@@ -12,24 +12,24 @@
     <img src="./assets/logo.svg" alt="Logo Alura">
   </header>
   <main>
-    <section>
-      <div>
-        <textarea name="text" id="text" placeholder="Digite seu texto"></textarea>
+    <section class="text">
+      <div class="text-input">
+        <span class="textarea" role="textbox" contenteditable></span>
       </div>
-      <div>
-        <sub>
-          <img src="./assets/warning.svg" alt="!"> Apenas letras minúsculas e sem acento
+      <div class="text-note">
+        <sub class="text-note-warn">
+          <img src="./assets/warning.svg" alt="!"> Apenas letras minúsculas e sem acento.
         </sub>
       </div>
     </section>
-    <section>
+    <section class="button-group">
       <button type="button" class="encrypt" onclick="encrypt()">Criptografar</button>
       <button type="button" class="decrypt" onclick="decrypt()">Descriptografar</button>
     </section>
-    <section>
+    <section class="output">
       <h2 class="output-title">Nenhuma mensagem encontrada</h2>
-      <p class="output">Digite um texto que você deseja criptografar ou descriptografar.</p>
-      <button type="button">
+      <p class="output-text">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <button type="button" class="output-button-copy" hidden>
         <span class="material-symbols-outlined">
           content_copy
         </span>
