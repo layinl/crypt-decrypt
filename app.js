@@ -6,7 +6,7 @@ let outputButtonCopy = document.querySelector(".output-button-copy");
 function encrypt() {
   let textToEncrypt = "";
   let encryptedText = "";
-  textToEncrypt = document.querySelector(".textarea").innerText;
+  textToEncrypt = document.querySelector(".textarea").value;
   if(checkIfEmpty(textToEncrypt)) return outputMessage;
   [...textToEncrypt].forEach(c => {
       switch (c) {
@@ -39,7 +39,7 @@ function encrypt() {
 function decrypt() {
   let textToDecrypt = "";
   let decryptedText = "";
-  textToDecrypt = document.querySelector(".textarea").innerText;
+  textToDecrypt = document.querySelector(".textarea").value;
   if(checkIfEmpty(textToDecrypt)) return outputMessage;
   decryptedText = textToDecrypt
     .replace(/enter/g, "e")
