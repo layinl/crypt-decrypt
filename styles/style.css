@@ -25,6 +25,8 @@ ul, ol, li {
 
 :root {
   --color-primary: #0A3871;
+  --color-secondary: #495057;
+  --color-tertiary: #343A40;
   --font-main: "Inter", sans-serif;
 }
 
@@ -33,26 +35,34 @@ body {
   background-color: #e5e5e5;
 }
 
+.text-input {
+  display: grid;
+}
+
 .textarea {
+  display: block;
   resize: none;
-  overflow-y: hidden;
+  overflow: hidden;
   border: none;
   background-color: transparent;
+  font-family: var(--font-main);
   font-size: 2rem;
+  line-height: 3rem;
   color: var(--color-primary);
 }
 
 .textarea:focus {
-  outline: none; 
+  outline: none;
 }
 
-.textarea[contenteditable]:empty::before {
-  content: "Digite seu texto";
+.textarea::placeholder {
+  color: var(--color-primary);
 }
 
 .text-note-warn {
   display: flex;
   gap: 8px;
+  color: var(--color-secondary);
 }
 
 .button-group {
@@ -97,6 +107,7 @@ button {
 
 .output-text {
   text-align: center;
+  color: var(--color-secondary);
 }
 
 @media screen and (max-width: 780px) {
@@ -109,8 +120,13 @@ button {
     margin: 0 16px;
   }
 
+  .text {
+    margin-top: 56px;
+  }
+
   .text-input {
-    min-height: 40vh;
+    min-height: 30vh;
+    margin-bottom: 64px;
   }
 
   .button-group {
@@ -122,6 +138,5 @@ button {
   button {
     width: 100%;
   }
-
 
 }
