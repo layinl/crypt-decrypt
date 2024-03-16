@@ -35,6 +35,24 @@ body {
   background-color: #e5e5e5;
 }
 
+header {
+  margin: 40px 84px;
+}
+
+main {
+  margin: 40px 240px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.text {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .text-input {
   display: grid;
 }
@@ -109,6 +127,7 @@ button:hover {
   background-color: #ffffff;
   border-radius: 32px;
   margin-bottom: 40px;
+  width: 400px;
   padding: 32px;
   box-shadow: 0 24px 32px -8px #00000015;
 }

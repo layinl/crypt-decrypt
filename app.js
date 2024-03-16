@@ -35,8 +35,7 @@ function encrypt() {
       }
     }
   )
-  outputTitle.setAttribute("hidden", "");
-  outputButtonCopy.removeAttribute("hidden");
+  toggleOutputVisibility(true);
   output.innerText = encryptedText;
   return encryptedText;
 }
@@ -56,8 +55,7 @@ function decrypt() {
     .replace(/ai/g, "a")
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
-  outputTitle.setAttribute("hidden", "");
-  outputButtonCopy.removeAttribute("hidden");
+    toggleOutputVisibility(true);
   output.innerText = decryptedText;
   return decryptedText;
 }
@@ -68,8 +66,7 @@ function decrypt() {
  */
 function checkIfEmpty(text) {
   if(text === "") {
-    outputTitle.removeAttribute("hidden");
-    outputButtonCopy.setAttribute("hidden", "");
+    toggleOutputVisibility(false);
     outputTitle.innerText = outputTitleMessage;
     output.innerText = outputMessage;
     return true;
@@ -80,8 +77,7 @@ function checkIfEmpty(text) {
 function checkIfSpecialChar(text) {
   text = text.replace(/\s/g, "");
   if(text.match(/\W|_/g)) {
-    outputTitle.removeAttribute("hidden");
-    outputButtonCopy.setAttribute("hidden", "");
+    toggleOutputVisibility(false);
     outputTitle.innerText = "Mensagem inválida";
     output.innerText = "Digite um texto sem letras com acento ou sem caracteres especiais.";
     return true;
@@ -100,8 +96,19 @@ function autoResize() {
     this.style.height = this.scrollHeight + 'px';
 }
 
+
 function copyOutput() {
   navigator.clipboard.writeText(output.innerText);
   outputButtonCopy.innerHTML = "Copiado!";
   setTimeout(() => outputButtonCopy.innerHTML = "Copiar", 3000);
+}
+
+function toggleOutputVisibility(isTextValid = true) {
+  if(isTextValid) {
+    outputTitle.setAttribute("hidden", "");
+    outputButtonCopy.removeAttribute("hidden");
+  } else {
+    outputTitle.removeAttribute("hidden");
+    outputButtonCopy.setAttribute("hidden", "");
+  }
 }
