@@ -127,6 +127,42 @@ button:hover {
   background-color: #ffffff;
 }
 
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+
+  header {
+    margin: 73.42px 40px;
+  }
+
+  main {   
+    margin: 0 40px;
+  }
+
+  .text {
+    margin-top: 116px;
+  }
+
+  .text-input {
+    min-height: 30vh;
+    margin-bottom: 342px;
+  }
+
+
+  .button-group {
+    flex-direction: row ;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .button-group>button {
+    width: 50%;
+  }
+
+  .output-text {
+    font-size: 1.5rem;   
+  }
+
+}
+
 @media screen and (max-width: 780px) {
   
   header {
