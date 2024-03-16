@@ -44,10 +44,12 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 80px;
+  min-height: 80vh;
 }
 
 .text {
-  width: 680px;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,11 +94,16 @@ main {
 button {
   height: 67px;
   border-radius: 24px;
+  padding: 24px;
   transition-duration: 0.1s;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.button-group>button {
+  width: 50%;
 }
 
 .encrypt {
@@ -123,13 +130,19 @@ button:hover {
 .output {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 16px;
   background-color: #ffffff;
   border-radius: 32px;
   margin-bottom: 40px;
-  width: 400px;
+  max-width: 400px;
+  min-height: 100%;
   padding: 32px;
   box-shadow: 0 24px 32px -8px #00000015;
+}
+
+.output-img {
+  object-fit: contain;
 }
 
 .output-title {
@@ -140,13 +153,15 @@ button:hover {
 .output-text {
   text-align: center;
   color: var(--color-secondary);
+  overflow-wrap: break-word;
 }
 
 .output-button-copy {
   background-color: #ffffff;
+  width: 100%;
 }
 
-@media screen and (min-width: 780px) and (max-width: 1024px) {
+@media screen and (min-width: 780px) and (max-width: 1200px) {
 
   header {
     margin: 73.42px 40px;
@@ -154,9 +169,11 @@ button:hover {
 
   main {   
     margin: 0 40px;
+    flex-direction: column;
   }
 
   .text {
+    width: 100%;
     margin-top: 116px;
   }
 
@@ -176,6 +193,14 @@ button:hover {
     width: 50%;
   }
 
+  .output {
+    width: 100%;
+  }
+
+  .output-img {
+    display: none;
+  }
+
   .output-text {
     font-size: 1.5rem;   
   }
@@ -190,6 +215,7 @@ button:hover {
 
   main {
     margin: 0 16px;
+    flex-direction: column;
   }
 
   .text {
@@ -198,17 +224,24 @@ button:hover {
 
   .text-input {
     min-height: 30vh;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 
   .button-group {
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 64px;
   }
 
-  button {
+  .button-group>button {
     width: 100%;
+  }
+
+  .output {
+    max-width: 100%;
+  }
+  
+  .output-img {
+    display: none;
   }
 
 }

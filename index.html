@@ -16,18 +16,20 @@
       <div class="text-input">
         <textarea class="textarea" placeholder="Digite seu texto"></textarea>
       </div>
-      <div class="text-note">
-        <sub class="text-note-warn">
-          <img src="./assets/warning.svg" alt="!"> Apenas letras minúsculas e sem acento.
-        </sub>
-      </div>
-      <div class="button-group">
-        <button type="button" class="encrypt" onclick="encrypt()">Criptografar</button>
-        <button type="button" class="decrypt" onclick="decrypt()">Descriptografar</button>
+      <div>
+        <div class="text-note">
+          <sub class="text-note-warn">
+            <img src="./assets/warning.svg" alt="!"> Apenas letras minúsculas e sem acento.
+          </sub>
+        </div>
+        <div class="button-group">
+          <button type="button" class="encrypt" onclick="encrypt()">Criptografar</button>
+          <button type="button" class="decrypt" onclick="decrypt()">Descriptografar</button>
+        </div>
       </div>
     </section>
     <section class="output">
-      <img src="./assets/notFound.svg" alt="Not Found">
+      <img class="output-img" src="./assets/notFound.svg" alt="Não Encontrado">
       <h2 class="output-title">Nenhuma mensagem encontrada</h2>
       <p class="output-text">Digite um texto que você deseja criptografar ou descriptografar.</p>
       <button type="button" class="output-button-copy" onclick="copyOutput()"

@@ -1,6 +1,7 @@
-let output = document.querySelector(".output-text")
+let outputImg = document.querySelector(".output-img");
+let output = document.querySelector(".output-text");
 let outputMessage = output.innerText;
-let outputTitle = document.querySelector(".output-title")
+let outputTitle = document.querySelector(".output-title");
 let outputTitleMessage = outputTitle.innerText;
 let outputButtonCopy = document.querySelector(".output-button-copy");
 
@@ -105,9 +106,11 @@ function copyOutput() {
 
 function toggleOutputVisibility(isTextValid = true) {
   if(isTextValid) {
+    outputImg.setAttribute("hidden", "");
     outputTitle.setAttribute("hidden", "");
     outputButtonCopy.removeAttribute("hidden");
   } else {
+    outputImg.removeAttribute("hidden");
     outputTitle.removeAttribute("hidden");
     outputButtonCopy.setAttribute("hidden", "");
   }
