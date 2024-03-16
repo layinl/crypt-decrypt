@@ -78,7 +78,9 @@ function checkIfEmpty(text) {
 }
 
 function checkIfSpecialChar(text) {
-  if(text.match(/\W|_/g)) {
+  if(!text.match(/[a-z]|\s/g)) {
+    outputTitle.removeAttribute("hidden");
+    outputButtonCopy.setAttribute("hidden", "");
     outputTitle.innerText = "Mensagem inválida";
     output.innerText = "Digite um texto sem letras com acento ou sem caracteres especiais.";
     return true;
