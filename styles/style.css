@@ -237,7 +237,7 @@ button:hover {
   }
 
   .output {
-    max-width: 100%;
+    width: 100%;
   }
   
   .output-img {
