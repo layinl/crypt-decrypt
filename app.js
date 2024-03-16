@@ -98,3 +98,9 @@ function autoResize() {
     this.style.height = 'auto';
     this.style.height = this.scrollHeight + 'px';
 }
+
+function copyOutput() {
+  navigator.clipboard.writeText(output.innerText);
+  outputButtonCopy.innerHTML = "Copiado!";
+  setTimeout(() => outputButtonCopy.innerHTML = "Copiar", 3000);
+}
