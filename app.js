@@ -16,28 +16,12 @@ function encrypt() {
   let encryptedText = "";
   textToEncrypt = document.querySelector(".textarea").value;
   if(checkIfEmpty(textToEncrypt) || checkIfSpecialChar(textToEncrypt)) return outputMessage;
-  [...textToEncrypt].forEach(c => {
-      switch (c) {
-        case 'e':
-          encryptedText += "enter";
-          break;
-        case 'i':
-          encryptedText += "imes";
-          break;
-        case 'a':
-          encryptedText += "ai";
-          break;
-        case 'o':
-          encryptedText += "ober";
-          break;
-        case 'u':
-          encryptedText += "ufat";
-          break;
-        default:
-          encryptedText += c;
-      }
-    }
-  )
+  encryptedText = textToEncrypt
+    .replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
   toggleOutputVisibility(true);
   output.innerText = encryptedText;
   return encryptedText;
