@@ -9,7 +9,8 @@ let outputButtonCopy = document.querySelector(".output-button-copy");
 
 /**
  * Encrypts the text in .output-text if valid or not empty
- * @returns the encryptedText
+ * @returns the encryptedText if valid or not empty. Returns outputMessage otherwise
+ * @see checkIfEmpty @see checkIfSpecialChar
  */
 function encrypt() {
   let textToEncrypt = "";
@@ -29,7 +30,8 @@ function encrypt() {
 
 /**
  * Decrypts the text in .output-text if valid or not empty
- * @returns the decryptedText
+ * @returns the decryptedText if valid or not empty. Returns outputMessage otherwise
+ * @see checkIfEmpty @see checkIfSpecialChar
  */
 function decrypt() {
   let textToDecrypt = "";
@@ -67,6 +69,7 @@ function checkIfEmpty(text) {
  * 
  * @param {string} text the text to be checked
  * @returns true if text contains a non lowercase letter (except number), false otherwise
+ * @see toggleOutputVisibility
  */
 function checkIfSpecialChar(text) {
   text = text.replace(/\s/g, "");
@@ -100,7 +103,7 @@ function copyOutput() {
  * toggles the output section visibility based on whether the input text is valid
  * - Shows the copy button, hides image and title if isTextValid is true
  * - Hides the copy button, shows image and title if isTextValid is false
- * @param {boolean} isTextValid if text is valid
+ * @param {boolean} isTextValid if text is valid. It'll be true by default
  */
 function toggleOutputVisibility(isTextValid = true) {
   if(isTextValid) {
