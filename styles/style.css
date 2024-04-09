@@ -248,3 +248,30 @@ button:hover {
   }
 
 }
+
+@media (prefers-color-scheme: dark) {
+  
+  :root {
+    --color-primary: #0A3871;
+    --color-secondary: #dbdbdb;
+    --color-tertiary: #d8d8d8;
+  }
+
+  body {
+    background-color: #212121;
+    color: #ffffff;
+  }
+
+  .output {
+    background-color: #121212;
+  }
+
+  .textarea, .textarea::placeholder {
+    color: #177fff;
+  }
+
+  .text-note-warn-icon {
+    fill: #ffffff;
+  }
+
+}

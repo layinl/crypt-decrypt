@@ -1,3 +1,4 @@
+let root = document.querySelector(":root");
 let textarea = document.querySelector(".textarea");
 textarea.addEventListener('input', autoResize, false);
 let outputImg = document.querySelector(".output-img");
@@ -115,4 +116,8 @@ function toggleOutputVisibility(isTextValid = true) {
     outputTitle.removeAttribute("hidden");
     outputButtonCopy.setAttribute("hidden", "");
   }
+}
+
+function toggleDarkMode() {
+  root
 }
