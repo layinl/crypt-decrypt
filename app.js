@@ -117,7 +117,3 @@ function toggleOutputVisibility(isTextValid = true) {
     outputButtonCopy.setAttribute("hidden", "");
   }
 }
-
-function toggleDarkMode() {
-  root
-}

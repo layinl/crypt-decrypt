@@ -252,7 +252,6 @@ button:hover {
 @media (prefers-color-scheme: dark) {
   
   :root {
-    --color-primary: #0A3871;
     --color-secondary: #dbdbdb;
     --color-tertiary: #d8d8d8;
   }
@@ -263,11 +262,11 @@ button:hover {
   }
 
   .output {
-    background-color: #121212;
+    background-color: #1b1b1b;
   }
 
   .textarea, .textarea::placeholder {
-    color: #177fff;
+    color: #8cc0ff;
   }
 
   .text-note-warn-icon {
