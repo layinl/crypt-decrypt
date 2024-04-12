@@ -23,14 +23,13 @@ ul, ol, li {
   END OF RESETS
 */
 
-:root {
+
+body {
   --color-primary: #0A3871;
   --color-secondary: #495057;
   --color-tertiary: #343A40;
   --font-main: "Inter", sans-serif;
-}
-
-body {
+  
   font-family: var(--font-main);
   background-color: #e5e5e5;
   color: black;
@@ -251,12 +250,11 @@ button:hover {
 
 @media (prefers-color-scheme: dark) {
   
-  :root {
-    --color-secondary: #dbdbdb;
-    --color-tertiary: #d8d8d8;
-  }
 
   body {
+    --color-secondary: #dbdbdb;
+    --color-tertiary: #d8d8d8;
+
     background-color: #212121;
     color: #ffffff;
   }
