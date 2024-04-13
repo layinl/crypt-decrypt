@@ -118,6 +118,31 @@ function toggleOutputVisibility(isTextValid = true) {
   }
 }
 
+
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-mode");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-mode");
+}
+
+/**
+ * Toggles the page's color mode. The preference is saved.
+ */
 function toggleDarkMode() {
+  document.body.classList.toggle("light-mode");
+  document.body.classList.toggle("dark-mode");
+  if (prefersDarkScheme.matches) {
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    var theme = document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
   
 }
