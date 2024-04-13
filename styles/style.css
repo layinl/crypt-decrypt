@@ -28,17 +28,57 @@ body {
   --color-primary: #0A3871;
   --color-secondary: #495057;
   --color-tertiary: #343A40;
+  --button-secondary: #ffffff;
+  --textarea-color: var(--color-primary);
+  --output-bg: #ffffff;
   --font-main: "Inter", sans-serif;
   
   font-family: var(--font-main);
   background-color: #e5e5e5;
   color: black;
-  /* background-color: #212121;
-  color: whitesmoke; */
+}
+
+body.dark-mode {
+  --color-secondary: #dbdbdb;
+  --color-tertiary: #c7c7c7;
+  --output-bg: #1b1b1b;
+  --textarea-color: #8cc0ff;
+
+  background-color: #212121;
+  color: whitesmoke;
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    --color-secondary: #dbdbdb;
+    --color-tertiary: #d8d8d8;
+    --output-bg: #1b1b1b;
+    --textarea-color: #8cc0ff;
+  
+    background-color: #212121;
+    color: whitesmoke;
+  }
+
+  body.light-mode {
+    --color-primary: #0A3871;
+    --color-secondary: #495057;
+    --color-tertiary: #343A40;
+    --button-secondary: #ffffff;
+    --textarea-color: var(--color-primary);
+    --output-bg: #ffffff;
+
+    background-color: #e5e5e5;
+    color: black;
+  }
+
 }
 
 header {
   margin: 40px 84px;
+  display: flex;
+  justify-content: space-between;
 }
 
 main {
@@ -70,7 +110,7 @@ main {
   font-family: var(--font-main);
   font-size: 2rem;
   line-height: 3rem;
-  color: var(--color-primary);
+  color: var(--textarea-color);
 }
 
 .textarea:focus {
@@ -78,7 +118,7 @@ main {
 }
 
 .textarea::placeholder {
-  color: var(--color-primary);
+  color: var(--textarea-color);
 }
 
 .text-note-warn {
@@ -118,6 +158,7 @@ button:hover {
 .decrypt, .output-button-copy {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
+  background-color: var(--button-secondary);
   font-size: 16px;
 }
 
@@ -134,7 +175,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  background-color: #ffffff;
+  background-color: var(--output-bg);
   border-radius: 32px;
   margin-bottom: 40px;
   width: 400px;
@@ -159,7 +200,7 @@ button:hover {
 }
 
 .output-button-copy {
-  background-color: #ffffff;
+  background-color: var(--button-secondary);
   width: 100%;
 }
 
@@ -244,31 +285,6 @@ button:hover {
   
   .output-img {
     display: none;
-  }
-
-}
-
-@media (prefers-color-scheme: dark) {
-  
-
-  body {
-    --color-secondary: #dbdbdb;
-    --color-tertiary: #d8d8d8;
-
-    background-color: #212121;
-    color: #ffffff;
-  }
-
-  .output {
-    background-color: #1b1b1b;
-  }
-
-  .textarea, .textarea::placeholder {
-    color: #8cc0ff;
-  }
-
-  .text-note-warn-icon {
-    fill: #ffffff;
   }
 
 }
