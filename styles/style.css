@@ -73,6 +73,10 @@ body.dark-mode {
     color: black;
   }
 
+  header img {
+    filter: brightness(18);
+  }
+
 }
 
 header {
