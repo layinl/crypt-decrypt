@@ -73,8 +73,8 @@ body.dark-mode {
     color: black;
   }
 
-  header img {
-    filter: brightness(18);
+  .header-logo {
+    filter: brightness(10) saturate(0.2);
   }
 
 }
@@ -210,6 +210,10 @@ button:hover {
 
 @media screen and (min-width: 780px) and (max-width: 1200px) {
 
+  body {
+    min-height: 100vh;
+  }
+
   header {
     margin: 73.42px 40px;
   }
@@ -222,13 +226,14 @@ button:hover {
   .text {
     width: 100%;
     margin-top: 116px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .text-input {
     min-height: 30vh;
-    margin-bottom: 342px;
+    margin-bottom: 342px; 
   }
-
 
   .button-group {
     flex-direction: row ;
